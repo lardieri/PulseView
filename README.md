@@ -2,6 +2,8 @@
 
 A UIView subclass to pulse a message
 
+![](images/PulsingText.gif)
+
 ## Usage
 
 1. Copy the PulseView.swift source file into your Xcode project.
@@ -13,6 +15,8 @@ A UIView subclass to pulse a message
 4. Set all the necessary Auto Layout constraints for the PulseView and its subviews.
 
    *Recommendation:* Anchor your subviews to the **layout margins** of the PulseView. (“Relative to margin” in the constraint properties.)
+   
+   ![](images/MarginRelativeConstraints.png)
    
 5. Set the properties of the PulseView. (See below.)
 
@@ -40,7 +44,10 @@ If you are not using a Storyboard, perform steps 2 – 6 in your view controller
 
 - **Layout Margins:** set to the corner radius + default margin.
 
-For example, if your corner radius is 20, set the PulseView’s layout margins to 28. Adjust as needed to make your view look good.
+  For example, if your corner radius is 20, set the PulseView’s layout margins to 28. Adjust as needed to make your view look good.
+
+   ![](images/Properties.png)
+
    
 ### Visual Effects
 
@@ -54,15 +61,17 @@ If you are using a visual effect (Blur, Vibrancy, etc.), then follow these recom
 
    *Hint:* Effects may be nested. For example, a Vibrancy effect inside a Blur effect. The content (label) should be a subview of the innermost effect’s content view.
 
-4. Anchor the label to the *margins* of its superview (the effect’s content view).
+4. Set the background color of the PulseView and the label to “Default” (Storyboard) or `.clear` (code).
 
-5. Adjust the layout margins of the effect’s content view so the effect visually surrounds the label. If the Pulse View has a corner radius, take that into account as well.
+5. Anchor the label to the *margins* of its superview (the effect’s content view).
+
+6. Adjust the layout margins of the effect’s content view so the effect visually surrounds the label.
 
    *Recommendation:*
    - Corner radius + 10 points.
    - 20 points if there is no corner radius.
 
-6. Set the background color of the PulseView and the label to “Default” (Storyboard) or `.clear` (code).
+   ![](images/VisualEffect.png)
 
 ## PulseView Demo App
 
