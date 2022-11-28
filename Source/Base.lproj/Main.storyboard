@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PulseView_Demo_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="uwP-QE-ecT">
+                                <rect key="frame" x="56.5" y="340.5" width="301" height="225"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdP-mn-Uu1" customClass="PulseView" customModule="PulseView_Demo_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="301" height="128"/>
+                                        <subviews>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9e9-Pq-fRc" userLabel="Blur Effect">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="128"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NP4-W0-cRc" userLabel="Blur content view">
+                                                    <rect key="frame" x="0.0" y="0.0" width="301" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QHw-sv-sNQ" userLabel="Vibrancy Effect">
+                                                            <rect key="frame" x="0.0" y="0.0" width="301" height="128"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ebi-yX-5UT" userLabel="Vibrancy content view">
+                                                                <rect key="frame" x="0.0" y="0.0" width="301" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SB-nR-4JF" userLabel="Message">
+                                                                        <rect key="frame" x="30" y="30" width="241" height="68"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="5SB-nR-4JF" firstAttribute="trailing" secondItem="ebi-yX-5UT" secondAttribute="trailingMargin" id="Iue-xs-1Fk"/>
+                                                                    <constraint firstItem="5SB-nR-4JF" firstAttribute="leading" secondItem="ebi-yX-5UT" secondAttribute="leadingMargin" id="Mdc-2W-OYh"/>
+                                                                    <constraint firstItem="5SB-nR-4JF" firstAttribute="top" secondItem="ebi-yX-5UT" secondAttribute="topMargin" id="jLG-PI-m8x"/>
+                                                                    <constraint firstItem="5SB-nR-4JF" firstAttribute="bottom" secondItem="ebi-yX-5UT" secondAttribute="bottomMargin" id="uqn-1p-VOI"/>
+                                                                </constraints>
+                                                                <directionalEdgeInsets key="directionalLayoutMargins" top="30" leading="30" bottom="30" trailing="30"/>
+                                                            </view>
+                                                            <vibrancyEffect>
+                                                                <blurEffect style="regular"/>
+                                                            </vibrancyEffect>
+                                                        </visualEffectView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="QHw-sv-sNQ" firstAttribute="bottom" secondItem="NP4-W0-cRc" secondAttribute="bottom" id="9Lr-a2-MAn"/>
+                                                        <constraint firstItem="QHw-sv-sNQ" firstAttribute="top" secondItem="NP4-W0-cRc" secondAttribute="top" id="OMA-iJ-as9"/>
+                                                        <constraint firstItem="QHw-sv-sNQ" firstAttribute="trailing" secondItem="NP4-W0-cRc" secondAttribute="trailing" id="Ugk-L8-SER"/>
+                                                        <constraint firstItem="QHw-sv-sNQ" firstAttribute="leading" secondItem="NP4-W0-cRc" secondAttribute="leading" id="sqC-pg-r3p"/>
+                                                    </constraints>
+                                                </view>
+                                                <blurEffect style="regular"/>
+                                            </visualEffectView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="9e9-Pq-fRc" firstAttribute="top" secondItem="cdP-mn-Uu1" secondAttribute="top" id="2vc-L4-Huh"/>
+                                            <constraint firstItem="9e9-Pq-fRc" firstAttribute="bottom" secondItem="cdP-mn-Uu1" secondAttribute="bottom" id="aqz-Le-vg3"/>
+                                            <constraint firstItem="9e9-Pq-fRc" firstAttribute="trailing" secondItem="cdP-mn-Uu1" secondAttribute="trailing" id="dZL-LE-nw3"/>
+                                            <constraint firstItem="9e9-Pq-fRc" firstAttribute="leading" secondItem="cdP-mn-Uu1" secondAttribute="leading" id="gKd-os-3MP"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="durationIn">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="durationOut">
+                                                <real key="value" value="1.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AT-eA-l8v" userLabel="Pulse button">
+                                        <rect key="frame" x="113" y="178" width="75.5" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Pulse" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5L0-6X-xXo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uwP-QE-ecT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TvC-Ea-1lY"/>
+                            <constraint firstItem="uwP-QE-ecT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mv1-bc-wJA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pulseView" destination="cdP-mn-Uu1" id="ZoK-bm-dcr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="84"/>
+        </scene>
+    </scenes>
+</document>
